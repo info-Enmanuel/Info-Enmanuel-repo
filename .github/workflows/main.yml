@@ -1,0 +1,16 @@
+name: Mi primer workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Comprobar código
+        uses: actions/checkout@v4
+
+      - name: Mostrar mensaje
+        run: echo "¡El flujo de trabajo se ejecutó correctamente!"
